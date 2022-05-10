@@ -1,0 +1,10 @@
+<h2>Add new task</h2>
+<%= form_for(Task.new) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_area :details, class: :details %>
+  <%= f.submit class: :button %>
+<% end %>
+
+<%= link_to 'Back', tasks_path, class: 'small-btn' %>
